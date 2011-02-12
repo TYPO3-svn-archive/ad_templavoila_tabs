@@ -76,7 +76,7 @@ class tx_adtemplavoilatabs_t3dimport {
 	}
 
 	protected function importTemplateObjects($pid) {
-		$templateObjectPath = t3lib_extMgm::extPath('ad_templavoila_tabs') . 'fec_tabs.t3d';
+		$templateObjectPath = t3lib_extMgm::extPath('ad_templavoila_tabs') . 'fec_import.t3d';
 		$data = null;
 
 		if(@is_file($templateObjectPath)) {

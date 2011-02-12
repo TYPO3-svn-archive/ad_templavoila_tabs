@@ -22,9 +22,6 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>input</eType>
-					<proc type="array">
-						<HSC type="integer">1</HSC>
-					</proc>
 				</tx_templavoila>
 				<TCEforms type="array">
 					<config type="array">
@@ -45,9 +42,6 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>input</eType>
-					<proc type="array">
-						<HSC type="integer">1</HSC>
-					</proc>
 				</tx_templavoila>
 				<TCEforms type="array">
 					<config type="array">
@@ -109,7 +103,6 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-					<TypoScriptObjPath>codeTabsSetup</TypoScriptObjPath>
 				</tx_templavoila>
 				<TCEforms type="array">
 					<config type="array">
@@ -140,7 +133,6 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-					<TypoScriptObjPath>codeTabsSetup</TypoScriptObjPath>
 				</tx_templavoila>
 				<TCEforms type="array">
 					<config type="array">
@@ -172,7 +164,6 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-					<TypoScriptObjPath>codeTabsSetup</TypoScriptObjPath>
 				</tx_templavoila>
 				<TCEforms type="array">
 					<config type="array">
