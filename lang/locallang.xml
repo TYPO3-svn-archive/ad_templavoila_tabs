@@ -4,11 +4,11 @@
 		<languageKey index="default" type="array">
 			<label index="extensionConfiguration.label">Import template objects: Select a storage folder and import the template objects for tabs onto your site.</label>
 
-			<label index="setting.jQuery">jQuery Library: Load jQuery library via Google AJAX Libraries API.</label>
-			<label index="setting.jQueryUi">jQuery UI: Load jQuery UI via Google AJAX Libraries API.</label>
-			<label index="setting.jQueryUiTheme">jQuery UI Themes-Gallery: If you'd like to use a pre-designed theme, choose from one of the themes in this gallery via Google AJAX Libraries API.</label>
-			<label index="setting.jQueryUiStyle">Your own jQuery UI Theme: Location of your custom theme (eg. fileadmin/ui-style/jquery-ui-1.8.6.custom.css). Roll your own theme on http://jqueryui.com/themeroller/.</label>
-			<label index="setting.jQueryCookie">jQuery Cookie plugin: Loads the jQuery Cookie plugin.</label>
+			<label index="constants.jQuery">jQuery Library: Load jQuery library via Google AJAX Libraries API.</label>
+			<label index="constants.jQueryUi">jQuery UI: Load jQuery UI via Google AJAX Libraries API.</label>
+			<label index="constants.jQueryUiTheme">jQuery UI Themes-Gallery: If you'd like to use a pre-designed theme, choose from one of the themes in this gallery via Google AJAX Libraries API.</label>
+			<label index="constants.jQueryUiStyle">Your own jQuery UI Theme: Location of your custom theme (eg. fileadmin/ui-style/jquery-ui-1.8.6.custom.css). Roll your own theme on http://jqueryui.com/themeroller/.</label>
+			<label index="constants.jQueryCookie">jQuery Cookie plugin: Loads the jQuery Cookie plugin.</label>
 
 			<label index="fce.typeHeader">Tab Module</label>
 

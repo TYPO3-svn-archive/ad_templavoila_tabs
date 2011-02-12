@@ -3,7 +3,7 @@
 	<meta type="array">
 		<type>CSH</type>
 		<description>CSH labels for FlexForm fields</description>
-		<csh_table>tx_adgooglemaps_pi1</csh_table>
+		<csh_table>tx_adtemplavoila_tabs</csh_table>
 		<fileId>EXT:ad_google_maps/Resources/Private/Language/locallang_flexform_csh.xml</fileId>
 		<labelContext type="array"></labelContext>
 	</meta>
