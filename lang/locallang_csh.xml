@@ -3,31 +3,30 @@
 	<meta type="array">
 		<type>CSH</type>
 		<description>CSH labels for FlexForm fields</description>
-		<csh_table>tx_adtemplavoilacycle</csh_table>
+		<csh_table>tx_adtemplavoila_tabs</csh_table>
 		<fileId>EXT:ad_google_maps/Resources/Private/Language/locallang_flexform_csh.xml</fileId>
 		<labelContext type="array"></labelContext>
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="field_width.description">Fixed width of the Cycle container.</label>
-			<label index="field_height.description">Fixed height of the Cycle container.</label>
-			<label index="field_navigation.description">Navigation for the Cycle.</label>
-			<label index="field_effects.description">Set transitions for content slide. Multible selection allowed.</label>
-			<label index="field_sync.description">Set to true if in/out transitions should occur simultaneously.</label>
-			<label index="field_timeout.description">Milliseconds between slide transitions (0 to disable auto advance).</label>
-			<label index="field_continuous.description">Set true to start next transition immediately after current one completes.</label>
-			<label index="field_speed.description">Speed of the transition (any valid fx speed value).</label>
-			<label index="field_speed_in.description">Speed of the 'in' transition.</label>
-			<label index="field_speed_out.description">Speed of the 'out' transition.</label>
-			<label index="field_options.description">User defined options in JavaScript style (see http://jquery.malsup.com/cycle/options.html).</label>
-			<label index="field_cycle.description">Every single pagecontent records represents a slider content.</label>
+			<label index="field_height.description">Fixed height of the tab container.</label>
+			<label index="field_selected.description">Tab to be selected on initialization. To set all tabs to unselected value to "none".</label>
+			<label index="field_collapsible.description">Set this option to allow an already selected tab to become unselected again upon reselection.</label>
+			<label index="field_effect.description">Enable animations for hiding and showing tab panels.</label>
+			<label index="field_duration.description">The duration to run the animation.</label>
+			<label index="field_event.description">The type of event to be used for selecting a tab.</label>
+			<label index="field_cookie.description">Store the latest selected tab in a cookie.</label>
+			<label index="field_tabs.description">Every single pagecontent records represents a tab.</label>
 		</languageKey>
 		<languageKey index="de" type="array">
-			<label index="field_width.description">Feste Breite des Cycle-Containers.</label>
-			<label index="field_height.description">Feste Höhe des Cycle-Containers.</label>
-			<label index="field_navigation.description">Navigation des Cycle.</label>
-			<label index="field_effects.description">Setzt die Übergänge der Seiteninhalte. Mehrfachauswahl erlaubt.</label>
-			<label index="field_cycle.description">Jeder einzelne Seiteninhalt repräsentiert einen Slider-Inhalt.</label>
+			<label index="field_height.description">Feste Höhe des Tab-Containers.</label>
+			<label index="field_selected.description">Aktiver Tab bei Initialisierung. Um alle Tabs zu deaktivieren setze den Wert auf "keinen".</label>
+			<label index="field_collapsible.description">Setze diese Option um einen bereits aktiven Tab zu deaktivieren nachdem er erneut geklickt wird.</label>
+			<label index="field_effect.description">Aktiviert eine Animation beim ein- und ausblenden.</label>
+			<label index="field_duration.description">Die Laufzeitgeschwindigkeit der Animation.</label>
+			<label index="field_event.description">Der Event-Typ um einen Tab zu aktivieren.</label>
+			<label index="field_cookie.description">Speichert den letzten gewählten Tab in einem Cookie.</label>
+			<label index="field_tabs.description">Jeder einzelne Seiteninhalt repräsentiert einen Tab.</label>
 		</languageKey>
 	</data>
 </T3locallang>
