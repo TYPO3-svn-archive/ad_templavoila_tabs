@@ -8,16 +8,12 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 if (t3lib_div::int_from_ver(t3lib_extMgm::getExtensionVersion('templavoila')) < 1005000) {
 	$GLOBALS['TBE_MODULES_EXT']['xMOD_tx_templavoila_cm1']['staticDataStructures'][] = array(
 		'title' => 'LLL:EXT:' . $_EXTKEY . '/lang/locallang.xml:fce.typeHeader',
-		'path' => 'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/tabs (fce).xml',
+		'path' => 'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/cycle (fce).xml',
 		'icon' => '',
 		'scope' => 2,
 	);
 }
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'core_templates/typoscript/', 'ad: Templavoila Tabs');
-
-// Add subheader to tt_content for tab title links.
-t3lib_div::loadTCA('tt_content');
-t3lib_extMgm::addToAllTCAtypes('tt_content','subheader', '', 'after:header');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'core_templates/typoscript/', 'ad: Templavoila Cycle');
 
 ?>

@@ -2,64 +2,73 @@
 <T3locallang>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="extensionConfiguration.label">Import template objects: Select a storage folder and import the template objects for tabs onto your site.</label>
+			<label index="extensionConfiguration.label">Import template objects: Select a storage folder and import the template objects for the Cycle module onto your site.</label>
 
 			<label index="constants.jQuery">jQuery Library: Load jQuery library via Google AJAX Libraries API.</label>
-			<label index="constants.jQueryUi">jQuery UI: Load jQuery UI via Google AJAX Libraries API.</label>
-			<label index="constants.jQueryUiTheme">jQuery UI Themes-Gallery: If you'd like to use a pre-designed theme, choose from one of the themes in this gallery via Google AJAX Libraries API.</label>
-			<label index="constants.jQueryUiStyle">Your own jQuery UI Theme: Location of your custom theme (eg. fileadmin/ui-style/jquery-ui-1.8.6.custom.css). Roll your own theme on http://jqueryui.com/themeroller/.</label>
-			<label index="constants.jQueryCookie">jQuery Cookie plugin: Loads the jQuery Cookie plugin.</label>
+			<label index="constants.style">Your own CSS file: Location of your custom theme (eg. fileadmin/custom.css).</label>
 
-			<label index="fce.typeHeader">Tab Module</label>
+			<label index="fce.typeHeader">Cycle Module</label>
 
+			<label index="fce.width">Width:</label>
 			<label index="fce.height">Height:</label>
-			<label index="fce.selected">Selected tab:</label>
-			<label index="fce.selected.tab1">Tab 1</label>
-			<label index="fce.selected.tab2">Tab 2</label>
-			<label index="fce.selected.tab3">Tab 3</label>
-			<label index="fce.selected.tab4">Tab 4</label>
-			<label index="fce.selected.tab5">Tab 5</label>
-			<label index="fce.selected.none">none</label>
-			<label index="fce.collapsible">Collapsible:</label>
-			<label index="fce.effect">Effect:</label>
-			<label index="fce.effect.none">none</label>
-			<label index="fce.effect.fade">Fade</label>
-			<label index="fce.effect.slide">Slide</label>
-			<label index="fce.duration">Effect duration:</label>
-			<label index="fce.duration.slow">slow</label>
-			<label index="fce.duration.normal">normal</label>
-			<label index="fce.duration.fast">fast</label>
-			<label index="fce.event">Event:</label>
-			<label index="fce.event.click">Click</label>
-			<label index="fce.event.mouseover">Roll over</label>
-			<label index="fce.cookie">Save in cookie:</label>
-			<label index="fce.tabs">Tab pagecontent:</label>
+			<label index="fce.navigation">Navigation Type:</label>
+			<label index="fce.navigation.none">No Navigation</label>
+			<label index="fce.navigation.browser">Browser</label>
+			<label index="fce.navigation.pagination">Pagination</label>
+			<label index="fce.effects">Transition effects:</label>
+			<label index="fce.effects.blindX">blindX</label>
+			<label index="fce.effects.blindY">blindY</label>
+			<label index="fce.effects.blindZ">blindZ</label>
+			<label index="fce.effects.cover">cover</label>
+			<label index="fce.effects.curtainX">curtainX</label>
+			<label index="fce.effects.curtainY">curtainY</label>
+			<label index="fce.effects.fade">fade</label>
+			<label index="fce.effects.fadeZoom">fadeZoom</label>
+			<label index="fce.effects.growX">growX</label>
+			<label index="fce.effects.growY">growY</label>
+			<label index="fce.effects.scrollUp">scrollUp</label>
+			<label index="fce.effects.scrollDown">scrollDown</label>
+			<label index="fce.effects.scrollLeft">scrollLeft</label>
+			<label index="fce.effects.scrollRight">scrollRight</label>
+			<label index="fce.effects.scrollHorz">scrollHorz</label>
+			<label index="fce.effects.scrollVert">scrollVert</label>
+			<label index="fce.effects.shuffle">shuffle</label>
+			<label index="fce.effects.slideX">slideX</label>
+			<label index="fce.effects.slideY">slideY</label>
+			<label index="fce.effects.toss">toss</label>
+			<label index="fce.effects.turnUp">turnUp</label>
+			<label index="fce.effects.turnDown">turnDown</label>
+			<label index="fce.effects.turnLeft">turnLeft</label>
+			<label index="fce.effects.turnRight">turnRight</label>
+			<label index="fce.effects.uncover">uncover</label>
+			<label index="fce.effects.wipe">wipe</label>
+			<label index="fce.effects.zoom">zoom</label>
+			<label index="fce.sync">Syncronize effects:</label>
+			<label index="fce.timeout">Interval:</label>
+			<label index="fce.continuous">Continuous:</label>
+			<label index="fce.speed">Speed:</label>
+			<label index="fce.speedIn">Speed In:</label>
+			<label index="fce.speedOut">Speed Out:</label>
+			<label index="fce.options">User defined options:</label>
+
+			<label index="template.prev">Previous</label>
+			<label index="template.next">Next</label>
 		</languageKey>
 		<languageKey index="de" type="array">
-			<label index="fce.typeHeader">Tab Modul</label>
+			<label index="fce.typeHeader">Cycle-Modul</label>
 
+			<label index="fce.width">Breite:</label>
 			<label index="fce.height">Höhe:</label>
-			<label index="fce.selected">Aktiver Tab:</label>
-			<label index="fce.selected.tab1">Tab 1</label>
-			<label index="fce.selected.tab2">Tab 2</label>
-			<label index="fce.selected.tab3">Tab 3</label>
-			<label index="fce.selected.tab4">Tab 4</label>
-			<label index="fce.selected.tab5">Tab 5</label>
-			<label index="fce.selected.none">keiner</label>
-			<label index="fce.collapsible">Zusammenklappbar:</label>
-			<label index="fce.effect">Effekt:</label>
-			<label index="fce.effect.none">kein</label>
-			<label index="fce.effect.fade">Fade</label>
-			<label index="fce.effect.slide">Slide</label>
-			<label index="fce.duration">Effektlaufzeit:</label>
-			<label index="fce.duration.slow">langsam</label>
-			<label index="fce.duration.normal">normal</label>
-			<label index="fce.duration.fast">schnell</label>
-			<label index="fce.event">Event:</label>
-			<label index="fce.event.click">Klick</label>
-			<label index="fce.event.mouseover">Roll Over</label>
-			<label index="fce.cookie">In Cookie speichern:</label>
-			<label index="fce.tabs">Tab Seiteninhalte:</label>
+			<label index="fce.navigation">Navigations Typ:</label>
+			<label index="fce.navigation.none">Keine Navigation</label>
+			<label index="fce.navigation.browse">Blättern</label>
+			<label index="fce.navigation.pagination">Paginierung</label>
+			<label index="fce.effects">Übergangseffekte:</label>
+			<label index="fce.sync">Syncronize effects (check if in/out transitions should occur simultaneously):</label>
+			<label index="fce.options">Benutzer definierte Optionen:</label>
+
+			<label index="template.prev">Zurück</label>
+			<label index="template.next">Weiter</label>
 		</languageKey>
 	</data>
 </T3locallang>
