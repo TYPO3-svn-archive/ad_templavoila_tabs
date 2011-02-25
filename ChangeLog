@@ -1,0 +1,8 @@
+2010-08-02 Arno Dudek <webmaster@adgrafik.at>
+
+1.0.0	First release.
+
+1.0.1	[BUGFIX] Fixed JavaScript errors if no elements on the page.
+		[TASK] Moved JavaScript from footer to header useing jQuery(document).ready().
+		[TASK] Changed property name tx_adtemplavoila_tabs* to tx_adtemplavoilaext* of including JS and CSS to have no conflicts with other ad_templavoila* extemsions.
+		[TASK] Optimized flexform.

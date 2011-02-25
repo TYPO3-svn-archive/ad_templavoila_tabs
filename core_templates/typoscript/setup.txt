@@ -1,0 +1,137 @@
+
+# If true, load jQuery via Google AJAX Libraries API.
+[globalVar = LIT:1 = {$plugin.tx_adtemplavoilatabs.jQuery}]
+page.includeJSlibs {
+	tx_adtemplavoilaext_jquery = https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+	tx_adtemplavoilaext_jquery.external = 1
+}
+[end]
+
+# If true, load jQuery UI via Google AJAX Libraries API.
+[globalVar = LIT:1 = {$plugin.tx_adtemplavoilatabs.jQueryUi}]
+page.includeJSlibs {
+	tx_adtemplavoilaext_jquery_ui = https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
+	tx_adtemplavoilaext_jquery_ui.external = 1
+}
+[end]
+
+# If true, load cookie plugin.
+[globalVar = LIT:1 = {$plugin.tx_adtemplavoilatabs.jQueryCookie}]
+page.includeJS {
+	tx_adtemplavoilaext_jquery_cookie = EXT:ad_templavoila_tabs/res/js/jquery.cookie.js
+}
+[end]
+
+# If a theme is selected, load theme via Google AJAX Libraries API.
+[globalVar = LIT:1 != {$plugin.tx_adtemplavoilatabs.jQueryUiTheme}]
+page.includeCSS {
+	tx_adtemplavoilaext_jquery_theme = http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/{$plugin.tx_adtemplavoilatabs.jQueryUiTheme}/jquery-ui.css
+	tx_adtemplavoilaext_jquery_theme.external = 1
+}
+[end]
+
+# If a style is set, load user style.
+page.includeCSS {
+	tx_adtemplavoilaext_jquery_ui_style = {$plugin.tx_adtemplavoilatabs.jQueryUiStyle}
+}
+
+page.jsInline {
+	8426 = COA
+	8426 {
+		wrap = jQuery(document).ready(function(){ | });
+
+		10 = TEXT
+		10.value (
+			// Remove URL and show only the anchor. jQuery Tabs don't like full path of RealURL.
+			jQuery('.tx_adtemplavoilatabs ul li a[href*=#c]').each(function(index, element){
+				jQuery(element).attr('href', '#' + jQuery(element).attr('href').split('#')[1]);
+			});
+		)
+
+		20 = COA
+		20 {
+			wrap = jQuery('.tx_adtemplavoilatabs').each(function(index, element){ jQuery(element).tabs({ | }); });
+
+			10 = TEXT
+			10.if.isTrue.data = register: field_collapsible
+			10.value = collapsible: true,
+
+			20 = COA
+			20 {
+				if.isTrue.data = register: field_effect
+				wrap = fx: { | },
+
+				10 = TEXT
+				10.data = register: field_effect
+				10.wrap = | : 'toggle',
+
+				20 = TEXT
+				20.data = register: field_duration
+				20.wrap = duration: ' | '
+			}
+
+			30 = TEXT
+			30.if.value = click
+			30.if.equals.data = register: field_event
+			30.if.negate = 1
+			30.data = register: field_event
+			30.wrap = event: ' | ',
+
+			40 = TEXT
+			40.if.isTrue.data = register: field_cookie
+			40.value = cookie: { expires: 30 },
+
+			50 = TEXT
+			50.if.isTrue.data = register: field_selected
+			50.value = selected: {register: field_selected},
+			50.insertData = 1
+
+			60 = TEXT
+			60.value = null: null
+		}
+	}
+}
+
+codeTabs >
+codeTabs = COA
+codeTabs {
+	stdWrap.dataWrap = <div id="{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilatabs"{register: field_height}> | </div>
+
+	10 = LOAD_REGISTER
+	10 {
+		field_height.field = field_height
+		field_height.noTrimWrap = | style="height: |px;"|
+		field_height.fieldRequired = field_height
+
+		field_selected.field = field_selected
+		field_collapsible.field = field_collapsible
+		field_effect.field = field_effect
+		field_duration.field = field_duration
+		field_event.field = field_event
+		field_cookie.field = field_cookie
+	}
+
+	20 = RECORDS
+	20 {
+		wrap = <ul> | </ul>
+		source.current = 1
+		tables = tt_content
+
+		conf.tt_content = TEXT
+		conf.tt_content {
+			outerWrap = <li> | </li>
+			field = subheader // header
+			htmlSpecialChars = 1
+			typolink.parameter.dataWrap = #c{field:uid}
+			stdWrap.HTMLparser = 1
+			stdWrap.HTMLparser.keepNonMatchedTags = 1
+			stdWrap.HTMLparser.tags.a.fixAttrib.href.prefixLocalAnchors = 0
+		}
+	}
+
+	30 = RECORDS
+	30 {
+		source.current = 1
+		tables = tt_content
+	}
+}
