@@ -1,4 +1,4 @@
 
-#cat=basic//2; type=user[EXT:ad_templavoila_tabs/class.tx_adtemplavoilatabs_t3dimport.php:&tx_adtemplavoilatabs_t3dimport->main]; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:extensionConfiguration.label
+#cat=basic//2; type=user[EXT:ad_templavoila_cycle/class.tx_adtemplavoilacycle_t3dimport.php:&tx_adtemplavoilacycle_t3dimport->main]; label=LLL:EXT:ad_templavoila_cycle/lang/locallang.xml:extensionConfiguration.label
 templateObjectPID = 0
 
