@@ -1,8 +1,17 @@
-plugin.tx_adtemplavoilacycle {
+plugin.tx_adtemplavoilatabs {
 
-	# cat=ad: Templavoila Cycle/enable/001; type=boolean; label=LLL:EXT:ad_templavoila_cycle/lang/locallang.xml:constants.jQuery
+	# cat=ad: Templavoila Tabs/enable/001; type=boolean; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:setting.jQuery
 	jQuery = 1
 
-	# cat=ad: Templavoila Cycle/other/001; type=text; label=LLL:EXT:ad_templavoila_cycle/lang/locallang.xml:constants.style
-	style = EXT:ad_templavoila_cycle/res/css/simple.css
+	# cat=ad: Templavoila Tabs/enable/002; type=boolean; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:setting.jQueryUi
+	jQueryUi = 1
+
+	#cat=ad: Templavoila Tabs/other/003; type=options[none=1,base,black-tie,blitzer,cupertino,dark-hive,dot-luv,eggplant,excite-bike,flick,hot-sneaks,humanity,le-frog,mint-choc,overcast,pepper-grinder,redmond,smoothness,south-street,start,sunny,swanky-purse,trontastic,ui-darkness,ui-lightness,vader]; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:setting.jQueryUiTheme
+	jQueryUiTheme = base
+
+	# cat=ad: Templavoila Tabs/other/004; type=text; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:setting.jQueryUiStyle
+	jQueryUiStyle = 
+
+	# cat=ad: Templavoila Tabs/enable/002; type=boolean; label=LLL:EXT:ad_templavoila_tabs/lang/locallang.xml:setting.jQueryCookie
+	jQueryCookie = 1
 }

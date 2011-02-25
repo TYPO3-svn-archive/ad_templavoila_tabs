@@ -9,7 +9,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 if (t3lib_div::int_from_ver(t3lib_extMgm::getExtensionVersion('templavoila')) >= 1005000) {
 	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'][] = array(
 		'title' => 'LLL:EXT:' . $_EXTKEY . '/lang/locallang.xml:fce.typeHeader',
-		'path' => 'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/cycle (fce).xml',
+		'path' => 'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/tabs (fce).xml',
 		'icon' => '',
 		'scope' => 2,
 	);
