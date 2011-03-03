@@ -9,3 +9,5 @@
 
 1.0.2	[BUGFIX] Fixed id attribute of container which had a number as id.
 		[BUGFIX] Added requied property to TypoScript object if there are no elements for the tab.
+
+1.0.3	[BUGFIX] Fixed id attribute of container (again) to use multiply tabs on one page.

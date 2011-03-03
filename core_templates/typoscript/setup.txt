@@ -36,91 +36,103 @@ page.includeCSS {
 }
 
 page.jsInline {
-	8426 = COA
-	8426 {
-		wrap = jQuery(document).ready(function(){ | });
-
-		10 = TEXT
-		10.value (
-			// Remove URL and show only the anchor. jQuery Tabs don't like full path of RealURL.
-			jQuery('.tx_adtemplavoilatabs ul li a[href*=#c]').each(function(index, element){
-				jQuery(element).attr('href', '#' + jQuery(element).attr('href').split('#')[1]);
-			});
-		)
-
-		20 = COA
-		20 {
-			stdWrap.outerWrap.cObject = COA
-			stdWrap.outerWrap.cObject {
-				10 = TEXT
-				10.data = register: field_id
-				10.wrap = jQuery('# | .tx_adtemplavoilatabs')
-
-				20 = TEXT
-				20.value = .each(function(index, element){ jQuery(element).tabs({ | }); });
-			}
-
-			10 = TEXT
-			10.if.isTrue.data = register: field_collapsible
-			10.value = collapsible: true,
-
-			20 = COA
-			20 {
-				if.isTrue.data = register: field_effect
-				wrap = fx: { | },
-
-				10 = TEXT
-				10.data = register: field_effect
-				10.wrap = | : 'toggle',
-
-				20 = TEXT
-				20.data = register: field_duration
-				20.wrap = duration: ' | '
-			}
-
-			30 = TEXT
-			30.if.value = click
-			30.if.equals.data = register: field_event
-			30.if.negate = 1
-			30.data = register: field_event
-			30.wrap = event: ' | ',
-
-			40 = TEXT
-			40.if.isTrue.data = register: field_cookie
-			40.value = cookie: { expires: 30 },
-
-			50 = TEXT
-			50.if.isTrue.data = register: field_selected
-			50.value = selected: {register: field_selected},
-			50.insertData = 1
-
-			60 = TEXT
-			60.value = null: null
-		}
-	}
+	8426 = TEXT
+	8426.data = register: tx_adtemplavoilatabs_javascript
+	8426.wrap = jQuery(document).ready(function(){ | });
+	8426.required = 1
 }
 
 codeTabs >
 codeTabs = COA
 codeTabs {
-	stdWrap.dataWrap = <div id="tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilatabs"{register: field_height}> | </div>
+	stdWrap.dataWrap = <div id="tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilatabs"{register: tx_adtemplavoilatabs_height}> | </div>
 	stdWrap.required = 1
 
 	10 = LOAD_REGISTER
 	10 {
-		field_id = tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}
-		field_id.insertData = 1
+		tx_adtemplavoilatabs_id = tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}
+		tx_adtemplavoilatabs_id.insertData = 1
 
-		field_height.field = field_height
-		field_height.noTrimWrap = | style="height: |px;"|
-		field_height.fieldRequired = field_height
+		tx_adtemplavoilatabs_height.field = field_height
+		tx_adtemplavoilatabs_height.noTrimWrap = | style="height: |px;"|
+		tx_adtemplavoilatabs_height.fieldRequired = field_height
 
-		field_selected.field = field_selected
-		field_collapsible.field = field_collapsible
-		field_effect.field = field_effect
-		field_duration.field = field_duration
-		field_event.field = field_event
-		field_cookie.field = field_cookie
+		tx_adtemplavoilatabs_selected.field = field_selected
+		tx_adtemplavoilatabs_collapsible.field = field_collapsible
+		tx_adtemplavoilatabs_effect.field = field_effect
+		tx_adtemplavoilatabs_duration.field = field_duration
+		tx_adtemplavoilatabs_event.field = field_event
+		tx_adtemplavoilatabs_cookie.field = field_cookie
+
+		# Save JavaScript to append multiple settings.
+		tx_adtemplavoilatabs_javascript_temp.data = register: tx_adtemplavoilatabs_javascript
+		tx_adtemplavoilatabs_javascript.cObject = COA
+		tx_adtemplavoilatabs_javascript.cObject {
+			10 = TEXT
+			10.data = register: tx_adtemplavoilatabs_javascript_temp
+
+			20 = COA
+			20 {
+				10 = TEXT
+				10.value (
+					// Remove URL and show only the anchor. jQuery Tabs don't like full path of RealURL.
+					jQuery('.tx_adtemplavoilatabs ul li a[href*=#c]').each(function(index, element){
+						jQuery(element).attr('href', '#' + jQuery(element).attr('href').split('#')[1]);
+					});
+				)
+
+				20 = COA
+				20 {
+					stdWrap.outerWrap.cObject = COA
+					stdWrap.outerWrap.cObject {
+						10 = TEXT
+						10.data = register: tx_adtemplavoilatabs_id
+						10.wrap = jQuery('# | ')
+
+						20 = TEXT
+						20.value = .each(function(index, element){ jQuery(element).tabs({ | }); });
+					}
+
+					10 = TEXT
+					10.if.isTrue.data = register: tx_adtemplavoilatabs_collapsible
+					10.value = collapsible: true,
+
+					20 = COA
+					20 {
+						if.isTrue.data = register: tx_adtemplavoilatabs_effect
+						wrap = fx: { | },
+
+						10 = TEXT
+						10.data = register: tx_adtemplavoilatabs_effect
+						10.wrap = | : 'toggle',
+
+						20 = TEXT
+						20.data = register: tx_adtemplavoilatabs_duration
+						20.wrap = duration: ' | '
+					}
+
+					30 = TEXT
+					30.if.value = click
+					30.if.equals.data = register: tx_adtemplavoilatabs_event
+					30.if.negate = 1
+					30.data = register: tx_adtemplavoilatabs_event
+					30.wrap = event: ' | ',
+
+					40 = TEXT
+					40.if.isTrue.data = register: tx_adtemplavoilatabs_cookie
+					40.value = cookie: { expires: 30 },
+
+					50 = TEXT
+					50.if.isTrue.data = register: tx_adtemplavoilatabs_selected
+					50.value = selected: {register: tx_adtemplavoilatabs_selected},
+					50.insertData = 1
+
+					# Set this option to be the last option with no comma.
+					60 = TEXT
+					60.value = 'null': null
+				}
+			}
+		}
 	}
 
 	20 = RECORDS
