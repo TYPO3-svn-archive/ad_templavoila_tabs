@@ -50,7 +50,15 @@ page.jsInline {
 
 		20 = COA
 		20 {
-			wrap = jQuery('.tx_adtemplavoilatabs').each(function(index, element){ jQuery(element).tabs({ | }); });
+			stdWrap.outerWrap.cObject = COA
+			stdWrap.outerWrap.cObject {
+				10 = TEXT
+				10.data = register: field_id
+				10.wrap = jQuery('# | .tx_adtemplavoilatabs')
+
+				20 = TEXT
+				20.value = .each(function(index, element){ jQuery(element).tabs({ | }); });
+			}
 
 			10 = TEXT
 			10.if.isTrue.data = register: field_collapsible
@@ -95,11 +103,14 @@ page.jsInline {
 codeTabs >
 codeTabs = COA
 codeTabs {
-	stdWrap.dataWrap = <div id="tx_adtemplavoilatabs_c{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilatabs"{register: field_height}> | </div>
+	stdWrap.dataWrap = <div id="tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}" class="tx_adtemplavoilatabs"{register: field_height}> | </div>
 	stdWrap.required = 1
 
 	10 = LOAD_REGISTER
 	10 {
+		field_id = tx_adtemplavoilatabs_uid_{register: tx_templavoila_pi1.parentRec.uid}
+		field_id.insertData = 1
+
 		field_height.field = field_height
 		field_height.noTrimWrap = | style="height: |px;"|
 		field_height.fieldRequired = field_height
